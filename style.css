@@ -1,28 +1,26 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Styling */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
     color: #333;
+    background-color: #fff; /* Set background color to white */
+    background: url('images/back.png') no-repeat center center fixed; /* Updated background image */
+    background-size: cover; /* Cover the entire viewport */
 }
 
-/* Header Styling */
+/* Header */
 header {
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
+    background: rgba(30, 58, 138, 0.8); /* Matching color with hero section */
+    padding: 1em 0;
 }
 
 header nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 header nav ul li {
@@ -32,148 +30,191 @@ header nav ul li {
 header nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 18px;
 }
 
 /* Hero Section */
 .hero-section {
-    background: url('hero-bg.jpg') no-repeat center center/cover;
+    background: linear-gradient(to right, #1e3a8a, #3b82f6), url('images/back.png') no-repeat center center/cover; /* Gradient and image background */
     height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
     color: #fff;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero-content h1 {
-    font-size: 50px;
-    margin-bottom: 10px;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .hero-content p {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-weight: 300;
 }
 
 .btn {
-    display: inline-block;
-    background: #ff9800;
+    background-color: #f97316; /* Button color */
     color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
+    padding: 12px 25px;
     border-radius: 5px;
-    transition: background 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background: #e68900;
+    background-color: #ec4899; /* Button hover color */
+}
+
+.social-links {
+    margin-top: 20px;
 }
 
 .social-links a {
-    color: #fff;
     margin: 0 10px;
-    text-decoration: none;
+    display: inline-block;
 }
 
-.social-links a:hover {
-    text-decoration: underline;
+.social-links img {
+    width: 32px;
+    height: 32px;
+    transition: opacity 0.3s ease;
 }
 
-/* Section Styling */
-section {
-    padding: 60px 20px;
+.social-links img:hover {
+    opacity: 0.8;
+}
+
+/* About Section */
+.about-section {
+    padding: 50px;
+    background: #1e3a8a; /* Matching color with hero section */
+    color: #fff;
     text-align: center;
 }
 
-.about-section, .skills-section, .certificates-section, .projects-section {
-    background: #f4f4f4;
+.about-section h2 {
+    font-size: 2.5em;
     margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-h3 {
-    font-size: 28px;
-    margin-bottom: 10px;
 }
 
 /* Skills Section */
+.skills-section {
+    padding: 50px;
+    background: #3b82f6; /* Matching color with hero section */
+    color: #fff;
+    text-align: center;
+}
+
 .skills-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.skill {
-    width: 300px;
-    margin: 10px;
-    text-align: left;
+.skills-list .skill {
+    margin-bottom: 20px;
 }
 
-.progress-bar {
+.skills-list .progress-bar {
     background: #ddd;
     border-radius: 5px;
-    overflow: hidden;
-    margin-top: 5px;
+    height: 10px;
 }
 
-.progress-bar span {
+.skills-list .progress-bar span {
     display: block;
-    height: 10px;
-    background: #4caf50;
+    height: 100%;
+    background: #333;
+    border-radius: 5px;
+}
+
+/* Certificates Section */
+.certificates-section {
+    padding: 50px;
+    background: #1e3a8a; /* Matching color with hero section */
+    color: #fff;
+    text-align: center;
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 50px;
+    background: #3b82f6; /* Matching color with hero section */
+    color: #fff;
+    text-align: center;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
 /* Contact Section */
+.contact-section {
+    padding: 50px;
+    background: #1e3a8a; /* Matching color with hero section */
+    color: #fff;
+    text-align: center;
+}
+
 .contact-section form {
     max-width: 600px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
 }
 
-.contact-section input, .contact-section textarea {
-    margin-bottom: 10px;
+.contact-section input, 
+.contact-section textarea {
+    width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
     border-radius: 5px;
 }
 
 .contact-section button {
-    padding: 10px;
+    padding: 10px 20px;
     background: #333;
     color: #fff;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
 }
 
-.contact-section button:hover {
-    background: #555;
-}
-
-/* Footer Styling */
+/* Footer */
 footer {
     background: #333;
     color: #fff;
-    padding: 20px;
     text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+footer .social-links {
+    margin-top: 10px;
 }
 
 footer .social-links a {
-    color: #fff;
     margin: 0 10px;
+    display: inline-block;
 }
-
-@media (max-width: 768px) {
-    .skills-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header nav ul {
-        flex-direction: column;
-    }
+.hero-section p {
+    font-size: 1.5em;
+    color: #f4f5f7;
+}
+.hero-section p strong {
+    font-weight: bold;
+    color: #f00606; /* Change the color to make your name stand out */
 }
